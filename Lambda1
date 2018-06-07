@@ -1,0 +1,53 @@
+import java.io.*;
+import java.util.*;
+import java.util.stream.*;
+
+
+ class Country {
+    private String continent;
+    private int population;
+    private String name;
+    
+    public Country(String continent, int population, String name)
+    {
+        this.continent = continent;
+        this.population = population;
+        this.name = name;
+    }
+
+    public String getContinent()
+    {
+      return continent;
+    }
+  
+    public int getPopulation()
+    {
+      return population;
+    }
+  
+    public static int getPopulation(List<Country> cs, String continent)
+    {
+      
+       List<Country> aux = cs.stream().filter(c -> c.getContinent().equals(continent)).collect(Collectors.toList());
+       return aux.stream().mapToInt(c ->  c.getPopulation()).sum();  
+    }
+  
+  public static void main (String[] args) {
+    
+    //calculate population for a specific continent
+    Country c1 = new Country("SA", 40, "Argentina");
+    Country c2 = new Country("SA", 200, "Brazil");
+    Country c3 = new Country("SA", 200, "Bolivia");
+    Country c4 = new Country("SA", 100, "Peru");    
+    Country c5 = new Country("NA", 300, "US");
+    List<Country> l = new ArrayList<Country>();
+    l.add(c1);
+    l.add(c2);
+    l.add(c3);
+    l.add(c4);
+    l.add(c5);
+    System.out.println("Population of South America is" + getPopulation(l, "SA"));
+  }
+}
+
+
