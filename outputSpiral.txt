@@ -1,0 +1,41 @@
+W
+x,
+y,
+z,
+
+
+
+
+a,b,d,
+f,
+h,
+j,
+l,
+n,
+p,
+r,
+q,o,
+m,
+k,
+i,
+g,
+e,
+c,
+
+
+
+
+a,b,c,d,e,f,g,h,i,j,k,l,x,
+w,v,u,t,s,r,q,p,o,n,m,
+
+
+
+a,b,c,f,
+i,
+h,g,d,
+e,
+
+ Clear
+Java
+ Run        Autocomplete
+Booting Machine...
